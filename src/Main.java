@@ -3,18 +3,11 @@
 //Creare 2 oggetti User di cui creerà un'istanza.
 //Del primo si stamperanno le informazioni di default, del secondo si cambieranno le informazioni e poi si stamperanno a video
 public class Main {
-    private static User user;
-    public static User getUser(){
-        if(user == null){
-            user = new User();
-        }
-        return user;
-    }
     public static void main(String[] args) {
-        User user1 = getUser();
+        User user1 = User.getUser();
         user1.userInfo();
 
-        User user2 = getUser();
+        User user2 = User.getUser();
         user2.setName("Claudia");
         user2.setAge(25);
         user2.userInfo();

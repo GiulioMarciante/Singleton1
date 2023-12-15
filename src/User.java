@@ -1,6 +1,13 @@
 public class User {
     private String name = "Gigi";
     private int age = 30;
+    private static User user;
+    public static User getUser(){
+        if(user == null){
+            user = new User();
+        }
+        return user;
+    }
     public String getName() {
         return name;
     }
